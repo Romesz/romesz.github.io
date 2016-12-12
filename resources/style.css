@@ -1,0 +1,130 @@
+html, body {
+  margin: 0;
+  font-family: 'Exo 2', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  min-height: calc(100vh - 50px);
+}
+
+.slides {
+  transition: opacity 1s linear;
+  display: flex;
+  opacity: 0;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 0;
+  will-change: opacity;
+}
+
+/*
+* About me
+*/
+#infoContainer {
+  display: flex;
+}
+
+#infoKey {
+  margin-right: 13px;
+  text-align: left;
+}
+
+#infoValue {
+  text-align: right;
+}
+
+#infoKey > p, #infoValue > p {
+  margin: 5px auto 5px auto;
+}
+
+#pic {
+  height: 100%;
+  max-height: 50%;
+}
+
+#pic > img {
+  border-radius: 200px;
+  width: 100%;
+  max-width: 324px;
+  height: auto;
+
+  animation-name: imgAnim;
+  animation-duration: 6s;
+  will-change: transform;
+}
+
+/*
+* Skills
+*/
+#skills {
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+}
+
+#skills div:first-child {
+  margin-right: 5px;
+}
+
+#skills p {
+  margin: 0 auto 10px auto;
+}
+
+progress {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 29px;
+  margin: 0 auto 10px auto;
+}
+
+
+/*
+* Footer
+*/
+footer {
+  height: 50px;
+  width: 100%;
+  background: #312f31;
+  text-align: center;
+}
+
+.picker {
+  margin: 0;
+  padding-top: 15px;
+  width: 100%;
+}
+
+li {
+  display: inline-block;
+  background-color: #FFF;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  opacity: 0.3;
+}
+li:hover {
+  cursor: pointer;
+}
+.picked {
+  opacity: 1;
+}
+
+@keyframes imgAnim {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateX(100px) rotate(30deg);
+  }
+  100% {
+    transform: none;
+  }
+}
