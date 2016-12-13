@@ -13,6 +13,8 @@ main {
 
 .slides {
   transition: opacity 1s linear;
+  -webkit-transition: opacity 1s linear;
+  display: -webkit-flex;
   display: flex;
   opacity: 0;
   overflow: hidden;
@@ -28,6 +30,7 @@ main {
 * About me
 */
 #infoContainer {
+  display: -webkit-flex;
   display: flex;
 }
 
@@ -54,9 +57,8 @@ main {
   width: 100%;
   max-width: 324px;
   height: auto;
-
-  animation-name: imgAnim;
-  animation-duration: 6s;
+  animation: imgAnim 6s;
+  -webkit-animation: imgAnim 6s;
   will-change: transform;
 }
 
@@ -64,7 +66,9 @@ main {
 * Skills
 */
 #skills {
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
   flex-direction: row;
   font-size: 24px;
 }
@@ -78,8 +82,11 @@ main {
 }
 
 progress {
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: flex-end;
   align-items: flex-end;
+  -webkit-flex-direction: column;
   flex-direction: column;
   height: 29px;
   margin: 0 auto 10px auto;
@@ -118,6 +125,18 @@ li:hover {
 }
 
 @keyframes imgAnim {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateX(100px) rotate(30deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@-webkit-keyframes imgAnim {
   0% {
     transform: none;
   }
