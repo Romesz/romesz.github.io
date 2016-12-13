@@ -4,12 +4,14 @@
   "description": "interactive cv",
   "main": "index.js",
   "scripts": {
-    "watch": "./node_modules/.bin/rollup -c --watch"
+    "watch": "./node_modules/.bin/rollup -c --watch",
+    "serve": "./node_modules/.bin/lite-server"
   },
   "author": "Romano Firtermaiszter",
   "license": "ISC",
   "devDependencies": {
     "babel-preset-es2015-rollup": "^1.2.0",
+    "lite-server": "^2.2.2",
     "rollup": "^0.36.4",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-watch": "^2.5.0"
