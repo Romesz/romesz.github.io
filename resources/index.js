@@ -52,3 +52,15 @@ function onSlideShow(currSide) {
   pickers[currSide].classList.add('picked');
   autoSlideChnange();
 }
+
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('../worker.js').then((reg) => {
+    console.log('ServiceWorker registered');
+    console.log(reg);
+  }, (err) => {
+    console.log('Error happend during registering ServiceWorker');
+    console.log(err);
+  });
+} else {
+  console.log('Your browser does not support serviceWorker :(');
+}

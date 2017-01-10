@@ -3,6 +3,8 @@
   "globals": {
     "document": true,
     "clearInterval": true,
-    "setInterval": true
+    "setInterval": true,
+    "navigator": true,
+    "console": true
   }
 }
